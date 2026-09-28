@@ -1,4 +1,4 @@
-Exactly. Since you already know **Flask, SQLAlchemy, CRUD and Docker**, don't spend time learning Flask here. The lab should use a familiar Flask API purely as a vehicle to understand **uv deeply**.
+Lets assume you already know **Flask, SQLAlchemy, CRUD and Docker**, don't spend time learning Flask here. The lab should use a familiar Flask API purely as a vehicle to understand **uv deeply**.
 
 The key question is:
 
