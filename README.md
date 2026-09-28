@@ -4,6 +4,83 @@ The key question is:
 
 > **"What problem does uv solve in my Flask project's lifecycle, and how does that lifecycle change from local development → CI → Docker → production?"**
 
+
+## Install `uv`
+
+### 🍎 macOS / 🐧 Linux
+
+Recommended official installer:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Restart your terminal, then verify:
+
+```bash
+uv --version
+```
+
+If `uv` isn't found, reload your shell:
+
+```bash
+source ~/.bashrc
+```
+
+or for zsh:
+
+```bash
+source ~/.zshrc
+```
+
+---
+
+### 🪟 Windows
+
+**PowerShell:**
+
+```powershell
+irm https://astral.sh/uv/install.ps1 | iex
+```
+
+Restart PowerShell, then:
+
+```powershell
+uv --version
+```
+
+---
+
+### Alternative: package managers
+
+**macOS Homebrew:**
+
+```bash
+brew install uv
+```
+
+**Windows WinGet:**
+
+```powershell
+winget install --id=astral-sh.uv -e
+```
+
+### Verify
+
+On all platforms:
+
+```bash
+uv --version
+```
+
+You should see something like:
+
+```text
+uv 0.x.x
+```
+
+
+
 # Quick Start — Mastering `uv` with a Production Flask API
 
 We'll build:
