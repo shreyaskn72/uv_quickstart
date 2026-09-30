@@ -1,0 +1,36 @@
+{
+  "name": "Devops Kubernetes",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "dockerDashComposeVersion": "none",
+      "installDockerComposeSwitch": false
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "runArgs": [
+    "--network=host"
+  ],
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "DOCKER_HOST": "unix:///var/run/docker-host.sock",
+    "KUBECONFIG": "/home/vscode/.kube/config"
+  },
+  "remoteUser": "root",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
